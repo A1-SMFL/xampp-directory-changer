@@ -5,29 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XamppDirectoryChanger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="625.5" Width="486.5">
     <Grid>
-        <TabControl Height="419" VerticalAlignment="Top">
+        <TabControl>
             <TabItem Header="Directory Changer">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Selected Website" Margin="105,49,579,313"/>
-                    <Grid Name="current_data_grid" Height="170" Margin="10,10,10,0" VerticalAlignment="Top" Background="White">
+                    <Grid Name="current_data_grid" Height="180" Margin="10,10,10,0" VerticalAlignment="Top" Background="White">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="53*"/>
-                            <ColumnDefinition Width="713*"/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="0*"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock TextAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="Current Selected Website" VerticalAlignment="Top" Height="27" FontSize="24" Grid.Row="1" Grid.ColumnSpan="2"/>
-                        <Border BorderBrush="#FF3C3C3C" BorderThickness="1"  VerticalAlignment="Top" Height="107" Margin="10,53,10,0" Background="#FF080808" Grid.Row="1" Grid.ColumnSpan="2" >
+                        <TextBlock TextAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="Current Selected Website" VerticalAlignment="Top" Height="27" FontSize="24" Grid.Row="1" FontWeight="Bold"/>
+                        <Border BorderBrush="#FF3C3C3C" BorderThickness="1"  VerticalAlignment="Top" Height="107" Margin="10,53,10,0" Background="#FF080808" Grid.Row="1" >
                             <Grid Background="#FFECECEC">
-                                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Margin="0,4,0,0" FontSize="14" FontWeight="Bold"/>
-                                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="0,23,0,0" Background="White"/>
-                                <TextBlock HorizontalAlignment="Left" Margin="349,39,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+                                <TextBlock  x:Name="current_name_title1" TextAlignment="Center" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Margin="0,4,0,0" FontSize="14" FontWeight="Bold"/>
+                                <TextBlock x:Name="current_title1" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,23,0,0" Background="White"/>
+                                <TextBlock  x:Name="current_url1" TextAlignment="Center" TextWrapping="Wrap" Text="File URL" VerticalAlignment="Top" Margin="0,44,0,0" FontSize="14" FontWeight="Bold"/>
+                                <TextBlock x:Name="current_title_Copy1" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,63,0,0" Background="White"/>
+                                <Button Content="Add Current To List" Margin="10,84,10,-11" VerticalAlignment="Top" Height="32"/>
                             </Grid>
                         </Border>
+
+                    </Grid>
+                    <Grid Height="344" Margin="10,0,10,10" VerticalAlignment="Bottom" Background="White">
+
+                        <TextBlock TextAlignment="Center" Margin="94,10,97,307" TextWrapping="Wrap" Text="Current Selected Website" VerticalAlignment="Center" Height="27" FontSize="24" FontWeight="Bold"/>
+
                     </Grid>
                 </Grid>
             </TabItem>
