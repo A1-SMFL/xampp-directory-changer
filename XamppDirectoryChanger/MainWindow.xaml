@@ -1,0 +1,45 @@
+﻿<Window x:Class="XamppDirectoryChanger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XamppDirectoryChanger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl Height="419" VerticalAlignment="Top">
+            <TabItem Header="Directory Changer">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Selected Website" Margin="105,49,579,313"/>
+                    <Grid Name="current_data_grid" Height="170" Margin="10,10,10,0" VerticalAlignment="Top" Background="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="53*"/>
+                            <ColumnDefinition Width="713*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock TextAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="Current Selected Website" VerticalAlignment="Top" Height="27" FontSize="24" Grid.Row="1" Grid.ColumnSpan="2"/>
+                        <Border BorderBrush="#FF3C3C3C" BorderThickness="1"  VerticalAlignment="Top" Height="107" Margin="10,53,10,0" Background="#FF080808" Grid.Row="1" Grid.ColumnSpan="2" >
+                            <Grid Background="#FFECECEC">
+                                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Margin="0,4,0,0" FontSize="14" FontWeight="Bold"/>
+                                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="0,23,0,0" Background="White"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="349,39,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Options">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock Margin="321,0,316,323" TextWrapping="Wrap" VerticalAlignment="Bottom" Text="Select the httpd.conf file" HorizontalAlignment="Center" Width="149"/>
+                    <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Name="httpd_conf_path"   VerticalAlignment="Center" Width="530" Background="White" Margin="128,90,128,273" Height="28"/>
+                    <Button Name="Select_File" Content="Select file" HorizontalAlignment="Left" Margin="128,123,0,0" VerticalAlignment="Top" Width="139" Height="42" Click="Select_File_Click"/>
+                    <Button Name="Reset_Path" Content="Reset to default" HorizontalAlignment="Left" Margin="519,123,0,0" VerticalAlignment="Top" Width="139" Height="42" Click="Reset_Path_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

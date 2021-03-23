@@ -1,0 +1,15 @@
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\bin\Debug\XamppDirectoryChanger.exe.config
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\bin\Debug\XamppDirectoryChanger.exe
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\bin\Debug\XamppDirectoryChanger.pdb
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger.csprojAssemblyReference.cache
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\MainWindow.g.cs
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\App.g.cs
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger_MarkupCompile.cache
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger_MarkupCompile.lref
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\MainWindow.baml
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger.g.resources
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger.Properties.Resources.resources
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger.csproj.GenerateResource.cache
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger.csproj.CoreCompileInputs.cache
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger.exe
+C:\Users\ollie\source\repos\XamppDirectoryChanger\XamppDirectoryChanger\obj\Debug\XamppDirectoryChanger.pdb
