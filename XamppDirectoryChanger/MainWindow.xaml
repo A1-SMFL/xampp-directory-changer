@@ -5,13 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XamppDirectoryChanger"
         mc:Ignorable="d"
-        Title="MainWindow" Height="625.5" Width="486.5">
+        Title="Xampp Directory Changer" Height="537.5" Width="349.5" Icon="icons/Xampp Website Changer.png">
     <Grid>
         <TabControl>
-            <TabItem Header="Directory Changer">
+            <TabItem Header="Website Changer">
+                <Grid Background="#FFE5E5E5">
+                    <ScrollViewer>
+
+
+                        <StackPanel Name="main_website_list" HorizontalAlignment="Stretch" Margin="0,0,0,0"/>
+                    </ScrollViewer>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Add Directory">
                 <Grid Background="#FFE5E5E5">
                     <Label Content="Selected Website" Margin="105,49,579,313"/>
-                    <Grid Name="current_data_grid" Height="180" Margin="10,10,10,0" VerticalAlignment="Top" Background="White">
+                    <Grid Name="current_data_grid" Margin="10,10,10,0" Background="White" Height="203" VerticalAlignment="Top">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
@@ -19,33 +29,56 @@
                             <RowDefinition Height="0*"/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <TextBlock TextAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="Current Selected Website" VerticalAlignment="Top" Height="27" FontSize="24" Grid.Row="1" FontWeight="Bold"/>
-                        <Border BorderBrush="#FF3C3C3C" BorderThickness="1"  VerticalAlignment="Top" Height="107" Margin="10,53,10,0" Background="#FF080808" Grid.Row="1" >
-                            <Grid Background="#FFECECEC">
-                                <TextBlock  x:Name="current_name_title1" TextAlignment="Center" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Margin="0,4,0,0" FontSize="14" FontWeight="Bold"/>
-                                <TextBlock x:Name="current_title1" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,23,0,0" Background="White"/>
-                                <TextBlock  x:Name="current_url1" TextAlignment="Center" TextWrapping="Wrap" Text="File URL" VerticalAlignment="Top" Margin="0,44,0,0" FontSize="14" FontWeight="Bold"/>
-                                <TextBlock x:Name="current_title_Copy1" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,63,0,0" Background="White"/>
-                                <Button Content="Add Current To List" Margin="10,84,10,-11" VerticalAlignment="Top" Height="32"/>
+                        <TextBlock TextAlignment="Center" Margin="10,10,10,166" TextWrapping="Wrap" Text="Add Website Folder" FontSize="24" Grid.Row="1" FontWeight="Bold"/>
+                        <Border BorderBrush="#FF3C3C3C" BorderThickness="1"  VerticalAlignment="Top" Height="118" Margin="10,53,10,0" Background="#FF080808" Grid.Row="1" >
+                            <Grid Background="#FFECECEC" Margin="0,0,0,0">
+                                <TextBlock  x:Name="name_title" TextAlignment="Center" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Margin="0,3,0,0" FontSize="14" FontWeight="Bold"/>
+                                <TextBox x:Name="name" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,23,0,0" Background="White"/>
+                                <TextBlock  x:Name="url_title" TextAlignment="Center" TextWrapping="Wrap" Text="File URL" VerticalAlignment="Top" Margin="0,44,0,0" FontSize="14" FontWeight="Bold"/>
+                                <TextBox x:Name="url" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,63,0,0" Background="White"/>
+                                <Button x:Name="add_website_folder" Content="Add To List" Margin="10,102,10,-16" Click="Add_Website_Folder_Click"/>
                             </Grid>
                         </Border>
 
                     </Grid>
-                    <Grid Height="344" Margin="10,0,10,10" VerticalAlignment="Bottom" Background="White">
 
-                        <TextBlock TextAlignment="Center" Margin="94,10,97,307" TextWrapping="Wrap" Text="Current Selected Website" VerticalAlignment="Center" Height="27" FontSize="24" FontWeight="Bold"/>
 
-                    </Grid>
+
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="10,218,10,10">
+                        <Grid Background="White">
+                            <TextBlock TextAlignment="Center" Margin="8,0,10,0" TextWrapping="Wrap" Text="Remove Website Folder" FontSize="24" FontWeight="Bold" Height="27" VerticalAlignment="Top"/>
+                            <ScrollViewer  Margin="10,42,10,10" Background="Gainsboro">
+                                <StackPanel x:Name="remove_websites_list" Orientation="Vertical" HorizontalAlignment="Stretch" Margin="0,0,0,0">
+
+                                </StackPanel>
+
+                            </ScrollViewer>
+                        </Grid>
+                    </Border>
+
+
                 </Grid>
             </TabItem>
             <TabItem Header="Options">
                 <Grid Background="#FFE5E5E5">
-                    <TextBlock Margin="321,0,316,323" TextWrapping="Wrap" VerticalAlignment="Bottom" Text="Select the httpd.conf file" HorizontalAlignment="Center" Width="149"/>
-                    <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Name="httpd_conf_path"   VerticalAlignment="Center" Width="530" Background="White" Margin="128,90,128,273" Height="28"/>
-                    <Button Name="Select_File" Content="Select file" HorizontalAlignment="Left" Margin="128,123,0,0" VerticalAlignment="Top" Width="139" Height="42" Click="Select_File_Click"/>
-                    <Button Name="Reset_Path" Content="Reset to default" HorizontalAlignment="Left" Margin="519,123,0,0" VerticalAlignment="Top" Width="139" Height="42" Click="Reset_Path_Click"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock TextAlignment="Center" Margin="0,0,0,437" TextWrapping="Wrap" VerticalAlignment="Bottom" Text="Select the httpd.conf file" Grid.ColumnSpan="2"/>
+                    <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="stored_path"   VerticalAlignment="Center" Background="White" Margin="10,47,10,404" Height="28" Grid.ColumnSpan="2"/>
+                    <Button Name="Select_File" Content="Select file" Margin="10,80,0,0" VerticalAlignment="Top" Height="42" Click="Select_File_Click" HorizontalAlignment="Left" Width="139" Grid.ColumnSpan="2"/>
+                    <Button Name="Reset_Path" Content="Reset to default" HorizontalAlignment="Right" Margin="0,80,10,0" VerticalAlignment="Top" Width="139" Height="42" Click="Reset_Path_Click" Grid.Column="1"/>
+
+                    <TextBlock TextAlignment="Center" Margin="0,0,0,319" TextWrapping="Wrap" VerticalAlignment="Bottom" Text="Select the xampp base file path" Grid.ColumnSpan="2"/>
+                    <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center" x:Name="base_path"   VerticalAlignment="Center" Background="White" Margin="10,165,10,286" Height="28" Grid.ColumnSpan="2"/>
+                    <Button x:Name="Select_base_path" Content="Select file" Margin="10,198,0,0" VerticalAlignment="Top" Height="42" HorizontalAlignment="Left" Width="139" Click="Select_base_path_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="Reset_base_Path" Content="Reset to default" HorizontalAlignment="Right" Margin="0,198,10,0" VerticalAlignment="Top" Width="139" Height="42" Click="Reset_base_Path_Click" Grid.Column="1" />
+
                 </Grid>
             </TabItem>
+
+
         </TabControl>
 
     </Grid>

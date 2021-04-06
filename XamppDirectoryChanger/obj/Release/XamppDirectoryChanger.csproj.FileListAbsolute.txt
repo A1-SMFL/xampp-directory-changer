@@ -1,0 +1,20 @@
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\bin\Release\icons\Xampp Website Changer.svg
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\bin\Release\httpd.conf
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\bin\Release\XamppDirectoryChanger.exe.config
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\bin\Release\XamppDirectoryChanger.exe
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\bin\Release\XamppDirectoryChanger.pdb
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\bin\Release\Newtonsoft.Json.dll
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\bin\Release\Newtonsoft.Json.xml
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\MainWindow.g.cs
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\App.g.cs
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger_Content.g.cs
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger_MarkupCompile.cache
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger_MarkupCompile.lref
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\MainWindow.baml
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger.g.resources
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger.Properties.Resources.resources
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger.csproj.GenerateResource.cache
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger.csproj.CoreCompileInputs.cache
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger.csproj.CopyComplete
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger.exe
+C:\Users\bingo\Desktop\Programming\xampp-directory-changer\XamppDirectoryChanger\obj\Release\XamppDirectoryChanger.pdb
