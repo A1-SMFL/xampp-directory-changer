@@ -8,6 +8,6 @@ namespace XamppDirectoryChanger
 {
     static class data
     {
-
+ 
     }
 }

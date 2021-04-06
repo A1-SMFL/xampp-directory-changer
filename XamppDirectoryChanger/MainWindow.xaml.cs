@@ -52,6 +52,30 @@ namespace XamppDirectoryChanger
             process.Close();
         }
 
+        private void ExecuteProcess(string proc, string args)
+        {
+            var processInfo = new ProcessStartInfo(proc, args);
+            processInfo.CreateNoWindow = true;
+            processInfo.UseShellExecute = false;
+            processInfo.RedirectStandardError = true;
+            processInfo.RedirectStandardOutput = true;
+
+            var process = Process.Start(processInfo);
+
+            process.OutputDataReceived += (object sender, DataReceivedEventArgs e) =>
+                Console.WriteLine("output>>" + e.Data);
+            process.BeginOutputReadLine();
+
+            process.ErrorDataReceived += (object sender, DataReceivedEventArgs e) =>
+                Console.WriteLine("error>>" + e.Data);
+            process.BeginErrorReadLine();
+
+            process.WaitForExit();
+
+            Console.WriteLine("ExitCode: {0}", process.ExitCode);
+            process.Close();
+        }
+
         private void init_app()
         {
 
@@ -597,12 +621,15 @@ namespace XamppDirectoryChanger
         private void ReloadXampp()
         {
             ExecuteCommand(base_path.Content.ToString() + @"\apache_stop.bat");
-            string start_apache_script = base_path.Content.ToString() + @"\apache_start.bat";
-            Thread start_apache_thread = new Thread(() => ExecuteCommand(start_apache_script));
+            string start_apache_script = base_path.Content.ToString() + "/apache/bin/httpd.exe";
+            Thread start_apache_thread = new Thread(() => ExecuteProcess(start_apache_script, ""));
+            start_apache_thread.IsBackground = true;
             start_apache_thread.Start();
             ExecuteCommand(base_path.Content.ToString() + @"\mysql_stop.bat");
-            string start_sql_script = base_path.Content.ToString() + @"\mysql_start.bat";
-            Thread start_sql_thread = new Thread(() => ExecuteCommand(start_sql_script));
+            string start_sql_script = base_path.Content.ToString() + "/mysql/bin/mysqld.exe";
+            string start_sql_args = " --defaults-file=" + base_path.Content.ToString() + "/mysql/bin/my.ini --standalone";
+            Thread start_sql_thread = new Thread(() => ExecuteProcess(start_sql_script, start_sql_args));
+            start_sql_thread.IsBackground = true;
             start_sql_thread.Start();
         }
 
